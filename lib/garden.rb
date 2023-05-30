@@ -1,4 +1,15 @@
-# Something is missing here
+class Plant
+  attr_accessor :name, :garden
+
+  def initialize(name:)
+    @name = name
+    @garden = nil
+  end
+
+  def self.all
+    ObjectSpace.each_object(self).to_a
+  end
+end
 
 class Garden
   attr_accessor :name
